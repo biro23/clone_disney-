@@ -1,5 +1,6 @@
 const gulp = require('gulp');
 const sass = require('gulp-sass')(require('sass'));
+const imagemin = require('gulp-imagemin');
 
 function styles() {
   return gulp
@@ -8,7 +9,16 @@ function styles() {
     .pipe(gulp.dest('./dist/css'));
 }
 
-exports.default = styles;
+// coloca 2 asteristicos para acessar as pastas
+function images() {
+  return gulp
+    .src('./src/images/**/*')
+    .pipe(imagemin()) // Removido o ponto e vírgula aqui
+    .pipe(gulp.dest('./dist/images'));
+}
+
+exports.default = gulp.parallel(styles, images);
+
 exports.watch = function () {
   gulp.watch('/src/styles/*.scss', gulp.parallel(styles));
 };
