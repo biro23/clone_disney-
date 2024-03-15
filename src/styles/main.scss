@@ -1,5 +1,5 @@
 // comecar o reset 
-
+@use "variavies";
 @use "hero";
 
 *{
@@ -8,12 +8,10 @@
   box-sizing: border-box;
 }
 
-$corDeFundo: #040714;
-$corTextoPrincipal: silver;
-$corTextoSecundario: #f9f9f9;
+
 
 body{
-  background-color: $corDeFundo;
+  background-color: variaveis.$corDeFundo;
 }
 
 // criar um mixin
@@ -21,13 +19,13 @@ body{
 @mixin text($FontSize: 16px) {
   font-size: $FontSize;
   line-height: $FontSize + 10px;
-  color: $corTextoPrincipal;
+  color: variavies.$corTextoPrincipal;
 
 }
 
 @mixin title ($FontSize: 40px){
   @include text($FontSize);
-  color: $corTextoSecundario;
+  color: variavies.$corTextoSecundario;
 
 
 }
@@ -48,7 +46,7 @@ body{
 
 .link-text {
   @include text(18px);
-  color: $corTextoSecundario;
+  color: variavies.$corTextoSecundario;
   text-decoration: underline;
 }
 
