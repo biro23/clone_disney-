@@ -16,7 +16,7 @@ body{
 
 // criar um mixin
 
-@mixin text($FontSize: 16px) {
+@mixin text($FontSize: 20px) {
   font-size: $FontSize;
   line-height: $FontSize + 10px;
   color: variaveis.$corTextoPrincipal;
