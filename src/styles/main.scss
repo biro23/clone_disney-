@@ -1,5 +1,5 @@
 // comecar o reset 
-@use "variavies";
+@use "variaveis";
 @use "hero";
 
 *{
@@ -19,13 +19,13 @@ body{
 @mixin text($FontSize: 16px) {
   font-size: $FontSize;
   line-height: $FontSize + 10px;
-  color: variavies.$corTextoPrincipal;
+  color: variaveis.$corTextoPrincipal;
 
 }
 
 @mixin title ($FontSize: 40px){
   @include text($FontSize);
-  color: variavies.$corTextoSecundario;
+  color: variaveis.$corTextoSecundario;
 
 
 }
@@ -46,7 +46,7 @@ body{
 
 .link-text {
   @include text(18px);
-  color: variavies.$corTextoSecundario;
+  color: variaveis.$corTextoSecundario;
   text-decoration: underline;
 }
 
