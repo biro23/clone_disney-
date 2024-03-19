@@ -9,10 +9,10 @@
 </head>
 
 <body>
-  <!-- criando o hero -->
+  <!-- Criando o hero -->
   <section class="hero">
     <div class="hero__content">
-      <h1 class="hero__content__brand">
+      <h1 class="hero__content__branding">
         <img src="./dist/images/disneyplus.svg" alt="Disney+">
       </h1>
       <h3 class="title--small">
@@ -21,7 +21,7 @@
       <p>
         <a href="#" class="link-text">Assinar o Disney+</a>
         <br>
-        <span class="text">R$ 27,90/mês o R$ 279/ano á vista*</span>
+        <span class="text">R$ 27,90/mês ou R$ 279,00/ano à vista*</span>
       </p>
       <ul class="hero__content__combos">
         <li class="hero__content__combos__combo">
@@ -36,10 +36,37 @@
         </li>
       </ul>
       <p class="text--small">
-        * O Preço pode variar caso aasinatura seja atravésde outras plataformas.
+        * O preço pode variar caso a assinatura seja através de outras plataformas.
       </p>
     </div>
   </section>
+  <section class="shows">
+    <nav class="shows__tabs">
+      <button data-tab-button="em_breve" class="shows__tabs__button shows__tabs__button--is-active">
+        Em breve
+      </button>
+      <button data-tab-button="populares" class="shows__tabs__button">
+        Mais populares
+      </button>
+      <button data-tab-button="start_plus" class="shows__tabs__button">
+        Mais no Star+
+      </button>
+    </nav>
+    <ul data-tab-id="em_breve" class="shows__list shows__list--is-active">
+      <li class="shows__list__item">
+        <img src="./dist/images/em_breve/desencantada.jpg" alt="Spidey">
+      </li>
+      <!-- Mais itens aqui -->
+    </ul>
+    <ul data-tab-id="populares" class="shows__list ">
+      <!-- Conteúdo para a aba "populares" -->
+    </ul>
+    <ul data-tab-id="start_plus" class="shows__list">
+      <!-- Conteúdo para a aba "start_plus" -->
+    </ul>
+  </section>
+
+  <script src="./src/main.js"></script>
 
 </body>
 

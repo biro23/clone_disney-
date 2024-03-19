@@ -1,6 +1,9 @@
 // comecar o reset 
 @use "variaveis";
 @use "hero";
+@use "shows";
+
+
 
 *{
   margin: 0;
@@ -16,9 +19,9 @@ body{
 
 // criar um mixin
 
-@mixin text($FontSize: 20px) {
-  font-size: $FontSize;
-  line-height: $FontSize + 10px;
+@mixin text($fontSize: 16px) {
+  font-size: $fontSize;
+  line-height: $fontSize + 10px;
   color: variaveis.$corTextoPrincipal;
 
 }
